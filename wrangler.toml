@@ -1,0 +1,16 @@
+name = "patchdelta"
+compatibility_date = "2025-04-19"
+account_id = "8cd9a0b61c637d585faffbcf46f38940"
+
+[assets]
+directory = "./dist"
+html_handling = "auto-trailing-slash"
+not_found_handling = "single-page-application"
+
+[[routes]]
+pattern = "patchdelta.com/*"
+zone_name = "patchdelta.com"
+
+[[routes]]
+pattern = "www.patchdelta.com/*"
+zone_name = "patchdelta.com"

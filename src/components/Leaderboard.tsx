@@ -58,6 +58,13 @@ export function Leaderboard({ vendors }: LeaderboardProps) {
               KEV Median: {v.kevMedianDelta} days
             </p>
           )}
+
+          {v.proactiveCount > 0 && (
+            <p className="text-sm text-gray-400 mt-1">
+              Proactive Disclosures:{' '}
+              <span className="text-green-400 font-mono">{v.proactiveCount}</span>
+            </p>
+          )}
         </div>
       ))}
     </div>

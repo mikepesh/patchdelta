@@ -44,10 +44,26 @@ export function Methodology() {
       </p>
 
       <h3 className="text-lg font-semibold mb-2 text-gray-200">Negative delta</h3>
-      <p className="text-gray-400 mb-6 leading-relaxed">
+      <p className="text-gray-400 mb-4 leading-relaxed">
         A negative delta means the vendor published their advisory before NVD published the CVE.
         This indicates a proactive or coordinated disclosure where the vendor was aware of and
         addressed the vulnerability prior to public NVD cataloging.
+      </p>
+      <p className="text-gray-400 mb-4 leading-relaxed">
+        Coordinated disclosure typically occurs through one of several channels: a bug bounty
+        program submission, internal security team discovery, or direct coordination with a CVE
+        Numbering Authority (CNA). In these cases, the vendor and the reporter work together to
+        develop a patch before the vulnerability is publicly listed in NVD. The vendor advisory
+        is then published — sometimes alongside a patch — before or concurrent with the NVD entry
+        going live.
+      </p>
+      <p className="text-gray-400 mb-6 leading-relaxed">
+        As a concrete example: CVE-2022-42475 (a FortiOS SSL-VPN heap overflow) was being
+        exploited in the wild when Fortinet published their advisory on 2022-12-12. NVD did not
+        catalog the CVE until 2023-01-11 — 21 days later. The negative delta in this case reflects
+        Fortinet's emergency disclosure during active exploitation, not a routine coordinated
+        process. Both scenarios — planned coordination and emergency disclosure — produce a
+        negative delta; the number alone does not distinguish between them.
       </p>
 
       <h3 className="text-lg font-semibold mb-2 text-gray-200">Positive delta</h3>

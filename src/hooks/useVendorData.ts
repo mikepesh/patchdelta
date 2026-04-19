@@ -9,6 +9,7 @@ export interface VendorStats {
   avgDelta: number;
   totalCves: number;
   kevMedianDelta: number | null; // null if no KEV CVEs
+  proactiveCount: number;
   cves: (CveEntry & { vendor: string })[];
 }
 
@@ -35,6 +36,7 @@ function average(values: number[]): number {
 function computeStats(data: VendorData): VendorStats {
   const deltas = data.cves.map(c => c.delta_days);
   const kevDeltas = data.cves.filter(c => c.in_kev).map(c => c.delta_days);
+  const proactiveCount = data.cves.filter(c => c.delta_days < 0).length;
   return {
     vendor: data.vendor,
     product: data.product,
@@ -42,6 +44,7 @@ function computeStats(data: VendorData): VendorStats {
     avgDelta: average(deltas),
     totalCves: data.cves.length,
     kevMedianDelta: kevDeltas.length > 0 ? median(kevDeltas) : null,
+    proactiveCount,
     cves: data.cves.map(c => ({ ...c, vendor: data.vendor })),
   };
 }

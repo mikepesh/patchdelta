@@ -122,6 +122,11 @@ export function CveTable({ cves }: CveTableProps) {
                 <th
                   key={col.key}
                   onClick={() => handleSort(col.key)}
+                  title={
+                    col.key === 'delta_days'
+                      ? 'Negative values mean the vendor published their advisory before NVD cataloged the CVE — indicating proactive or coordinated disclosure.'
+                      : undefined
+                  }
                   className="cursor-pointer select-none px-3 py-2 text-gray-400 hover:text-gray-100 whitespace-nowrap border-b border-gray-800"
                 >
                   {col.label}
@@ -178,8 +183,20 @@ export function CveTable({ cves }: CveTableProps) {
                     {cve.advisory_published}
                   </a>
                 </td>
-                <td className={`px-3 py-2 whitespace-nowrap font-mono ${deltaColor(cve.delta_days)}`}>
+                <td
+                  className={`px-3 py-2 whitespace-nowrap font-mono ${deltaColor(cve.delta_days)}`}
+                  title={
+                    cve.delta_days < 0
+                      ? 'Negative values mean the vendor published their advisory before NVD cataloged the CVE — indicating proactive or coordinated disclosure.'
+                      : undefined
+                  }
+                >
                   {cve.delta_days}
+                  {cve.delta_days < 0 && (
+                    <span className="ml-1.5 text-xs font-sans font-medium text-green-500 border border-green-800 rounded px-1 py-px">
+                      Proactive
+                    </span>
+                  )}
                 </td>
                 <td className="px-3 py-2 whitespace-nowrap">
                   {cve.in_kev && (

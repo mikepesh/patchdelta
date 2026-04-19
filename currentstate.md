@@ -13,18 +13,20 @@
 
 ## Data
 
-Both vendor files contain **sample/placeholder data only** — 5 CVEs each. Real data has not been populated yet.
+Schema 2.0 in effect. Real CVE data ingested for both vendors.
 
 | File | CVEs | Status |
 |------|------|--------|
-| `src/data/fortinet.json` | 5 | Sample only |
-| `src/data/pan.json` | 5 | Sample only |
+| `src/data/fortinet.json` | 10 | Real data — schema 2.0 |
+| `src/data/pan.json` | 10 | Real data — schema 2.0 |
 
 ## Open tasks
 
-- [ ] Populate `src/data/fortinet.json` with real CVE data
-- [ ] Populate `src/data/pan.json` with real CVE data
 - [ ] Add `www` DNS A record in Cloudflare (proxied, `192.0.2.1`) — `www.patchdelta.com` not resolving yet
+- [ ] Expand real CVE coverage beyond initial 10 per vendor (ongoing)
+- [ ] Verify CVE-2023-44487 (Fortinet) `advisory_first_published`: Oct 2023 IPS threat signal vs Feb 2024 formal PSIRT advisory — see `confidence_note` on entry
+- [ ] Wayback Machine verification for CVE-2024-55591 (FG-IR-24-535) first-public date
+- [ ] Wayback Machine verification for CVE-2019-1579 (PAN) July 18 advisory date
 
 ## CI/CD
 
@@ -38,17 +40,20 @@ Both are set on `mikepesh/patchdelta`.
 
 ```
 src/
-  data/fortinet.json        ← edit this to update Fortinet CVEs
-  data/pan.json             ← edit this to update PAN-OS CVEs
-  types.ts                  ← CveEntry, VendorData interfaces
-  hooks/useVendorData.ts    ← synchronous stats (median, avg, KEV median)
+  data/fortinet.json        ← schema 2.0, edit to add/update Fortinet CVEs
+  data/pan.json             ← schema 2.0, edit to add/update PAN-OS CVEs
+  types.ts                  ← CveEntry, VendorData interfaces (schema 2.0)
+  hooks/useVendorData.ts    ← synchronous stats; schema guard throws on version mismatch
   components/
-    Leaderboard.tsx         ← two vendor cards, "Faster" badge
-    CveTable.tsx            ← sort, filter, color-coded badges
-    Methodology.tsx         ← static text section
+    Leaderboard.tsx         ← two vendor cards, "Faster" badge, proactive count
+    CveTable.tsx            ← sort, filter, confidence markers, Proactive badge
+    Methodology.tsx         ← verbatim public methodology from data-spec.md §9
     Header.tsx
     Footer.tsx
   App.tsx
+CONTRIBUTING.md             ← manual ingest runbook
+data-spec.md                ← canonical data contract (authoritative)
+architecture.md             ← vocabulary and component layout
 ```
 
 ## V2 note

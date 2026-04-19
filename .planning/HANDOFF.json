@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-04-19T22:20:16Z",
+  "phase": "proactive-disclosures",
+  "phase_name": "Proactive Disclosure Features",
+  "phase_dir": ".planning",
+  "plan": "PROACTIVE_PLAN.md",
+  "task": 0,
+  "total_tasks": 4,
+  "status": "paused",
+  "completed_tasks": [
+    {"id": "v1-build", "name": "Scaffold and build PatchDelta V1", "status": "done", "commit": "7305c56"},
+    {"id": "deploy", "name": "GitHub repo + Cloudflare Workers CI/CD", "status": "done", "commit": "80420cf"},
+    {"id": "real-data", "name": "Populate real CVE data (8 Fortinet, 7 PAN-OS)", "status": "done", "commit": "523724b"},
+    {"id": "www-dns", "name": "www.patchdelta.com DNS A record", "status": "done", "commit": "manual"},
+    {"id": "memory-cleanup", "name": "Clear stale V2 memories, write current state", "status": "done", "commit": "in-memory"},
+    {"id": "proactive-plan", "name": "Plan proactive disclosure features", "status": "done", "commit": "untracked"}
+  ],
+  "remaining_tasks": [
+    {"id": "T1", "name": "Add proactiveCount to useVendorData.ts", "status": "not_started", "file": "src/hooks/useVendorData.ts"},
+    {"id": "T2A", "name": "Leaderboard proactive count stat", "status": "not_started", "file": "src/components/Leaderboard.tsx"},
+    {"id": "T2B", "name": "CveTable Proactive badge + tooltip", "status": "not_started", "file": "src/components/CveTable.tsx"},
+    {"id": "T3", "name": "Methodology negative delta expansion", "status": "not_started", "file": "src/components/Methodology.tsx"}
+  ],
+  "blockers": [],
+  "human_actions_pending": [],
+  "decisions": [
+    {"decision": "JSON data files in src/data/ with direct imports", "rationale": "Spec says bundled at build time, no runtime API calls", "phase": "v1-build"},
+    {"decision": "Cloudflare Workers Assets (not Pages)", "rationale": "User specified Cloudflare Worker", "phase": "deploy"},
+    {"decision": "Native title attribute for tooltip (no new deps)", "rationale": "No animations, no new dependencies constraint", "phase": "proactive-plan"},
+    {"decision": "border-style badge (not filled) for Proactive label", "rationale": "Informative not gamified — security tool aesthetic", "phase": "proactive-plan"}
+  ],
+  "uncommitted_files": [
+    ".gitignore (modified)",
+    ".planning/ (untracked — all planning files)",
+    "PatchDelta_V1_Spec_GSD.md (untracked)",
+    "PatchDelta_V2_Research_Archive.zip (untracked)"
+  ],
+  "next_action": "Run gsd-executor with PROACTIVE_PLAN.md — start at T1 (add proactiveCount to useVendorData.ts), then T2A+T2B in parallel, then T3",
+  "context_notes": "Site is live at patchdelta.com and www.patchdelta.com with real CVE data. CI/CD is wired (push to main auto-deploys). The proactive disclosure features are cosmetic/content — no data model changes beyond adding proactiveCount to VendorStats. All 4 tasks are well-specified in PROACTIVE_PLAN.md."
+}

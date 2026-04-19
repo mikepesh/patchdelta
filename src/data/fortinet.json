@@ -1,28 +1,50 @@
 {
   "vendor": "Fortinet",
   "product": "FortiOS",
-  "last_updated": "2024-03-15",
+  "last_updated": "2026-04-19",
   "cves": [
+    {
+      "cve_id": "CVE-2024-55591",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2025-01-14",
+      "advisory_id": "FG-IR-24-535",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-535",
+      "advisory_published": "2025-01-14",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2024-47575",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2024-10-23",
+      "advisory_id": "FG-IR-24-423",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-423",
+      "advisory_published": "2024-10-23",
+      "delta_days": 0,
+      "in_kev": true
+    },
     {
       "cve_id": "CVE-2024-21762",
       "severity": "CRITICAL",
       "cvss": 9.8,
-      "nvd_published": "2024-02-08",
+      "nvd_published": "2024-02-09",
       "advisory_id": "FG-IR-24-015",
       "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-015",
       "advisory_published": "2024-02-08",
-      "delta_days": 0,
+      "delta_days": -1,
       "in_kev": true
     },
     {
       "cve_id": "CVE-2024-23113",
       "severity": "CRITICAL",
       "cvss": 9.8,
-      "nvd_published": "2024-02-08",
+      "nvd_published": "2024-02-15",
       "advisory_id": "FG-IR-24-029",
       "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-029",
       "advisory_published": "2024-02-08",
-      "delta_days": 0,
+      "delta_days": -7,
       "in_kev": true
     },
     {
@@ -32,19 +54,30 @@
       "nvd_published": "2023-10-10",
       "advisory_id": "FG-IR-23-315",
       "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-23-315",
-      "advisory_published": "2023-10-23",
-      "delta_days": 13,
-      "in_kev": false
+      "advisory_published": "2024-01-02",
+      "delta_days": 84,
+      "in_kev": true
     },
     {
       "cve_id": "CVE-2023-27997",
       "severity": "CRITICAL",
       "cvss": 9.8,
-      "nvd_published": "2023-06-12",
+      "nvd_published": "2023-06-13",
       "advisory_id": "FG-IR-23-097",
       "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-23-097",
       "advisory_published": "2023-06-12",
-      "delta_days": 0,
+      "delta_days": -1,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2022-42475",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2023-01-02",
+      "advisory_id": "FG-IR-22-398",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-22-398",
+      "advisory_published": "2022-12-12",
+      "delta_days": -21,
       "in_kev": true
     },
     {

@@ -1,0 +1,62 @@
+{
+  "vendor": "Palo Alto Networks",
+  "product": "PAN-OS",
+  "last_updated": "2024-03-10",
+  "cves": [
+    {
+      "cve_id": "CVE-2024-3400",
+      "severity": "CRITICAL",
+      "cvss": 10.0,
+      "nvd_published": "2024-04-12",
+      "advisory_id": "PAN-SA-2024-0006",
+      "advisory_url": "https://security.paloaltonetworks.com/CVE-2024-3400",
+      "advisory_published": "2024-04-12",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2024-0012",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2024-11-18",
+      "advisory_id": "PAN-SA-2024-0015",
+      "advisory_url": "https://security.paloaltonetworks.com/CVE-2024-0012",
+      "advisory_published": "2024-11-18",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2023-38203",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2023-07-14",
+      "advisory_id": "PAN-SA-2023-0005",
+      "advisory_url": "https://security.paloaltonetworks.com/CVE-2023-38203",
+      "advisory_published": "2023-07-25",
+      "delta_days": 11,
+      "in_kev": false
+    },
+    {
+      "cve_id": "CVE-2023-0009",
+      "severity": "HIGH",
+      "cvss": 7.8,
+      "nvd_published": "2023-02-08",
+      "advisory_id": "PAN-SA-2023-0001",
+      "advisory_url": "https://security.paloaltonetworks.com/CVE-2023-0009",
+      "advisory_published": "2023-02-08",
+      "delta_days": 0,
+      "in_kev": false
+    },
+    {
+      "cve_id": "CVE-2022-0028",
+      "severity": "HIGH",
+      "cvss": 8.6,
+      "nvd_published": "2022-08-10",
+      "advisory_id": "PAN-SA-2022-0006",
+      "advisory_url": "https://security.paloaltonetworks.com/CVE-2022-0028",
+      "advisory_published": "2022-09-13",
+      "delta_days": 34,
+      "in_kev": false
+    }
+  ]
+}

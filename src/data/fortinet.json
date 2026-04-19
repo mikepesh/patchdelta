@@ -1,0 +1,62 @@
+{
+  "vendor": "Fortinet",
+  "product": "FortiOS",
+  "last_updated": "2024-03-15",
+  "cves": [
+    {
+      "cve_id": "CVE-2024-21762",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2024-02-08",
+      "advisory_id": "FG-IR-24-015",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-015",
+      "advisory_published": "2024-02-08",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2024-23113",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2024-02-08",
+      "advisory_id": "FG-IR-24-029",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-24-029",
+      "advisory_published": "2024-02-08",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2023-44487",
+      "severity": "HIGH",
+      "cvss": 7.5,
+      "nvd_published": "2023-10-10",
+      "advisory_id": "FG-IR-23-315",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-23-315",
+      "advisory_published": "2023-10-23",
+      "delta_days": 13,
+      "in_kev": false
+    },
+    {
+      "cve_id": "CVE-2023-27997",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2023-06-12",
+      "advisory_id": "FG-IR-23-097",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-23-097",
+      "advisory_published": "2023-06-12",
+      "delta_days": 0,
+      "in_kev": true
+    },
+    {
+      "cve_id": "CVE-2022-40684",
+      "severity": "CRITICAL",
+      "cvss": 9.8,
+      "nvd_published": "2022-10-18",
+      "advisory_id": "FG-IR-22-377",
+      "advisory_url": "https://www.fortiguard.com/psirt/FG-IR-22-377",
+      "advisory_published": "2022-10-10",
+      "delta_days": -8,
+      "in_kev": true
+    }
+  ]
+}

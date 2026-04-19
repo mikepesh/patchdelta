@@ -37,18 +37,27 @@ export function Leaderboard({ vendors }: LeaderboardProps) {
             )}
           </div>
 
-          <div className="mb-4">
-            <p className="text-5xl font-mono font-bold">
-              <DeltaValue value={v.medianDelta} />
-            </p>
-            <p className="text-sm text-gray-400 mt-1">Median Delta (days)</p>
-          </div>
-
-          <div className="mb-3">
-            <p className="text-2xl font-mono">
-              <DeltaValue value={v.avgDelta} />
-            </p>
-            <p className="text-sm text-gray-400 mt-0.5">Average Delta (days)</p>
+          <div className="flex gap-6 mb-4">
+            <div>
+              <p className="text-5xl font-mono font-bold">
+                <DeltaValue value={v.medianDelta} />
+              </p>
+              <p className="text-sm text-gray-400 mt-1">Median Delta (days)</p>
+            </div>
+            <div>
+              <p className="text-5xl font-mono font-bold">
+                <DeltaValue value={v.avgDelta} />
+              </p>
+              <p className="text-sm text-gray-400 mt-1">Avg Delta (days)</p>
+            </div>
+            {v.proactiveCount > 0 && (
+              <div>
+                <p className="text-5xl font-mono font-bold text-green-400">
+                  {v.proactiveCount}
+                </p>
+                <p className="text-sm text-gray-400 mt-1">Proactive</p>
+              </div>
+            )}
           </div>
 
           <p className="text-sm text-gray-500">{v.totalCves} CVEs tracked</p>
@@ -56,13 +65,6 @@ export function Leaderboard({ vendors }: LeaderboardProps) {
           {v.kevMedianDelta !== null && (
             <p className="text-sm text-gray-400 mt-1">
               KEV Median: {v.kevMedianDelta} days
-            </p>
-          )}
-
-          {v.proactiveCount > 0 && (
-            <p className="text-sm text-gray-400 mt-1">
-              Proactive Disclosures:{' '}
-              <span className="text-green-400 font-mono">{v.proactiveCount}</span>
             </p>
           )}
         </div>
